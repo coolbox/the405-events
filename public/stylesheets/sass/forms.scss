@@ -1,0 +1,26 @@
+form{
+  margin: 30px 0 50px;
+}
+
+input[type=submit]{
+  font-family: 'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, serif;
+  float: right;
+  background: $orange;
+  border: none;
+  font-size: 0.8em;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 12px 8px;
+
+  &:hover{
+    background: $dark-orange;
+    cursor: pointer;
+  }
+}
+
+form.admin{
+  input[type=submit]{
+    color: #fff;
+    margin: 10px 0;
+  }
+}

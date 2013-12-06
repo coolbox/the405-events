@@ -1,0 +1,37 @@
+table {
+  width: 100%;
+
+  thead{
+    border-bottom: 3px solid #000;
+
+    th{
+      text-align: left;
+      padding: 0 0 5px;
+      text-transform: uppercase;
+      font-size: 0.9em;
+    }
+  }
+  
+  tr{
+    border-bottom: 1px solid #000;
+
+    td{
+      padding: 5px 15px 5px 0;
+      vertical-align: middle;
+
+      &:last-child{
+        padding-right: 0;
+      }
+
+      a, form{
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0 10px 0 0;
+      }
+    }
+  }
+
+  form{
+    margin: 0;
+  }
+}

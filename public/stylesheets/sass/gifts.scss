@@ -1,0 +1,70 @@
+ul.gifts {
+  margin: 30px 0 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    margin: 0 0 18px 0;
+    padding: 10px;
+    border: 2px solid $light-gray;
+    width: 90%;
+    vertical-align: top;
+
+    img {
+      width: 100%;
+    }
+
+    h2{
+      margin: 20px 0 0;
+      line-height: 120%;
+    }
+
+    .purchase{
+      p, form{
+        display: inline-block;
+        vertical-align: top;
+        width: 49%;
+        margin: 0;
+      }
+
+      form{
+        text-align: right;
+      }
+    }
+
+    &:hover {
+      border-color: $orange;
+    }
+  }
+}
+
+/* #Media Queries
+================================================== */
+
+@media only screen and (min-width: 950px){
+  .three-col{
+    -moz-column-count: 3;
+    -moz-column-gap: 30px;
+    -webkit-column-count: 3;
+    -webkit-column-gap : 30px;
+
+    margin: 0 0 30px;
+  }
+}
+
+@media only screen and (min-width: 480px){
+  ul.gifts{
+    li {
+      margin: 0 18px 18px 0;
+      width: 220px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px){
+  ul.gifts{
+    li {
+      width: 228px;
+    }
+  }
+}

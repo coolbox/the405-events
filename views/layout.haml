@@ -1,0 +1,36 @@
+!!!  
+%html  
+  %head  
+    %meta{charset: "utf-8"}/
+    %meta{content: "chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %link{href: "http://fonts.googleapis.com/css?family=Lato:900|Merriweather:400,900", rel: "stylesheet", type: "text/css"}/
+    %link{rel: 'stylesheet', href: '/stylesheets/index.css', type: "text/css"}/
+    %link{rel: "stylesheet", href: "/stylesheets/gridforms.css", type: "text/css"}/
+    /[if lt IE 9]
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    %title Pete's Gift List
+    %meta{content: "A small gift list application for sharing affiliate linked gifts with my friends and family.", name: "description"}/
+
+  %body
+    = haml :"shared/analytics"
+    %header
+      %nav
+        %a.home{href: "/"} Peter Roome
+        %a.twitter{href: "http://twitter.com/zoltarSpeaks", :target => :_blank} @zoltarSpeaks
+
+    %section.content
+      = yield 
+
+    %footer
+      %div
+        %p
+          %a{href: "http://peteroome.com"} Made by Pete
+      .right
+        %p.copyright
+          &#169;
+          = Time.now.year
+          Peter Roome
+
+    %script{src: "/javascripts/jquery.js"}
+    %script{src: "/javascripts/application.js"}
+    %script{src: "/javascripts/gridforms.js"}

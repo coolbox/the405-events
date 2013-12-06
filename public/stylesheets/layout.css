@@ -1,0 +1,74 @@
+/*
+Syntax error: Undefined variable: "$white".
+        on line 86 of ./public/stylesheets/sass/layout.scss
+
+81:     }
+82:     p {
+83:         margin: 0;
+84:     }
+85:     p, a {
+86:         color: $white;
+87:     }
+88: }
+
+Backtrace:
+./public/stylesheets/sass/layout.scss:86
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/script/variable.rb:49:in `_perform'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/script/node.rb:40:in `perform'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:298:in `visit_prop'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:320:in `visit_rule'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `block in visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `map'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:53:in `visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:109:in `block in visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:121:in `with_environment'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:108:in `visit_children'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `block in visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:128:in `visit_root'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/base.rb:37:in `visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:100:in `visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/visitors/perform.rb:7:in `visit'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/tree/root_node.rb:20:in `render'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:315:in `_render'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/engine.rb:262:in `render'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `each'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin.rb:81:in `update_stylesheets'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin.rb:54:in `check_for_updates'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/plugin/rack.rb:51:in `call'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.6.0/lib/puma/rack_patch.rb:13:in `call'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sinatra-1.4.3/lib/sinatra/base.rb:212:in `call'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.6.0/lib/puma/configuration.rb:68:in `call'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.6.0/lib/puma/server.rb:486:in `handle_request'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.6.0/lib/puma/server.rb:357:in `process_client'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.6.0/lib/puma/server.rb:250:in `block in run'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.6.0/lib/puma/thread_pool.rb:92:in `call'
+/Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.6.0/lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: Undefined variable: \"$white\".\A         on line 86 of ./public/stylesheets/sass/layout.scss\A \A 81:     }\A 82:     p {\A 83:         margin: 0;\A 84:     }\A 85:     p, a {\A 86:         color: $white;\A 87:     }\A 88: }"; }

@@ -1,0 +1,153 @@
+$orange: #eb6746;
+$dark-orange: #b15440;
+$white: white;
+$blue: #4cbdb9;
+$dead_link_grey: #dbdcdd;
+$light-gray: #eee;
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  color: #333332;
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* LAYOUT STYLES */
+html,
+body {
+  font-size: 1em;
+  font-family: 'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, serif;
+  background: #fefefe;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+h1, h2 {
+  color: $orange;
+  letter-spacing: -1px;
+}
+
+h1 {
+  line-height: 118%;
+  font-weight: 900;
+  font-size: 2em;
+  margin: 0 0 3px;
+}
+
+h2 {
+  line-height: 118%;
+  font-size: 1.5em;
+  font-weight: 900;
+  margin: 40px 0 12px;
+  text-transform: capitalize;
+}
+
+h4 {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  color: $blue;
+  letter-spacing: 0.1em;
+  margin: 0 0 12px;
+}
+
+p {
+  line-height: 145%;
+  font-size: 1.1em;
+  margin: 0 0 18px 0;
+  color: #333332;
+}
+
+a {
+  color: $orange;
+  text-decoration: none;
+}
+
+a:hover {
+  color: $dark-orange;
+}
+
+pre {
+  margin: 0 0 23px
+}
+
+/* #Media Queries
+================================================== */
+
+// Pete's Custom queries
+@media only screen and (min-width: 950px){
+  .three-col{
+    -moz-column-count: 3;
+    -moz-column-gap: 30px;
+    -webkit-column-count: 3;
+    -webkit-column-gap : 30px;
+
+    margin: 0 0 30px;
+  }
+}
+
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {}
+
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {}
+
+
+// Import css
+@import 'layout';
+@import 'forms';
+@import 'gifts';
+@import 'admin';

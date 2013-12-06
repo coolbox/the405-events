@@ -1,0 +1,23 @@
+%form{:action => "/gift", :method => :post, :class => "grid-form admin"}
+  %fieldset
+    %legend New Gift
+    %div{"data-row-span" => "4"}
+      %div{"data-field-span" => "4"}
+        %label{:for => "gift[title]"} Title:
+        %input{:type => :text, :name => "gift[title]"}
+    %div{"data-row-span" => "4"}
+      %div{"data-field-span" => "2"}
+        %label{:for => "gift[size]"} Size:
+        %input{:type => :text, :name => "gift[size]"}
+      %div{"data-field-span" => "2"}
+        %label{:for => "gift[price]"} Price:
+        %input{:type => :text, :name => "gift[price]"}
+    %div{"data-row-span" => "4"}
+      %div{"data-field-span" => "4"}
+        %label{:for => "gift[image]"} Image:
+        %input{:type => :text, :name => "gift[image]"}
+    %div{"data-row-span" => "4"}
+      %div{"data-field-span" => "4"}
+        %label{:for => "gift[url]"} URL:
+        %input{:type => :text, :name => "gift[url]"}
+    %input{:type => :submit, :value => "Save", :class => "button"}

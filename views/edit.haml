@@ -1,0 +1,19 @@
+%form{ :action => "/update/#{@gift.id}", :method => :post, :class => "admin"}
+  %input{:type => :hidden, :name => :_method, :value => :put }
+  %fieldset
+    %label{:for => "gift[title]"} Title:
+    %input{:type => :text, :name => "gift[title]", :value => @gift.title}
+
+    %label{:for => "gift[size]"} Size:
+    %input{:type => :text, :name => "gift[size]", :value => @gift.size}
+    
+    %label{:for => "gift[price]"} Price:
+    %input{:type => :text, :name => "gift[price]", :value => @gift.price}
+
+    %label{:for => "gift[image]"} Image:
+    %input{:type => :url, :name => "gift[image]", :value => @gift.image}
+
+    %label{:for => "gift[url]"} URL:
+    %input{:type => :url, :name => "gift[url]", :value => @gift.url}
+
+    %input{:type => :submit, :value => "Save", :class => "button"}
