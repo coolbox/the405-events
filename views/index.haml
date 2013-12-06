@@ -1,42 +1,20 @@
-%h1 Gift List
-.meta
-  %h4 Thanks for visiting
+%h2 
+  The best gigs, in one list, curated by those fine folk over at The 405.
 
-.three-col
-  %p 
-    Where possible, each of the gifts belowed is linked to via an affiliate account I have setup. 
-
-  %p 
-    This means that if you click on one of the gifts and purchase it, a small percentage (approx. 3%) of the money spent will be rewarded to my affiliate account.
-
-  %p 
-    After Christmas, any money accumulated in the account will be donated to a charity or good cause. Suggestions of a worthy cause are welcome, please 
-    %a{:href => "mailto:pete.roome@gmail.com?subject=Charity and Good Cause Suggestion "}
-      email you ideas to me.
-
-  %p
-    To be clear, you don't need to do anything special apart from click on a gift if you feel like purchasing it. The link will take you to the shop where the gift is listed, where you can pay for it as you would do normally.
-
-%ul.gifts
-  - @gifts.each do |gift|
-    - unless gift.title.blank?
-      %li{"data-gift" => gift.id}
-        %a{:href => gift.url, :target => :_blank}
-          %img{:src => gift.image}
-        
-        %a{:href => gift.url, :target => :_blank}
-          %h2
-            = gift.title
-
-          %h4 
-            Size: 
-            = size_applicable(gift.size)
-          
-        .purchase
-          %p<
-            &#163;
-            = gift.price
-
-          %form{ :action => "/gift/#{gift.id}/purchased", :method => :post }
-            %input{:type => :hidden, :name => :_method, :value => :put}
-            %input{:type => :submit, :value => "Purchased?"}
+%table.gigs
+  - @gigs.each do |day, gig|
+    %thead
+      %tr
+        %th=day.inspect
+    %tbody
+      - @gigs.each do |gig|
+        %tr
+          %td
+            %h3
+              %a{:href => gig.url, :target => :_blank}
+                = gig.title
+          %td= gig.date_time
+          %td= gig.venue
+          %td= gig.price
+          %td
+            %a{:href => gig.url, :target => :_blank} More Info

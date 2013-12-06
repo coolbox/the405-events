@@ -1,6 +1,6 @@
 /*
 Syntax error: Undefined variable: "$light-gray".
-        on line 9 of ./public/stylesheets/sass/gifts.scss
+        on line 9 of ./public/stylesheets/sass/gigs.scss
 
 4: 
 5:   li {
@@ -15,7 +15,7 @@ Syntax error: Undefined variable: "$light-gray".
 14:       width: 100%;
 
 Backtrace:
-./public/stylesheets/sass/gifts.scss:9
+./public/stylesheets/sass/gigs.scss:9
 /Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/script/variable.rb:49:in `_perform'
 /Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/script/node.rb:40:in `perform'
 /Users/peterroome/.rvm/gems/ruby-2.0.0-p247/gems/sass-3.2.12/lib/sass/script/list.rb:71:in `block in _perform'
@@ -78,4 +78,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Syntax error: Undefined variable: \"$light-gray\".\A         on line 9 of ./public/stylesheets/sass/gifts.scss\A \A 4: \A 5:   li {\A 6:     display: inline-block;\A 7:     margin: 0 0 18px 0;\A 8:     padding: 10px;\A 9:     border: 2px solid $light-gray;\A 10:     width: 90%;\A 11:     vertical-align: top;\A 12: \A 13:     img {\A 14:       width: 100%;"; }
+  content: "Syntax error: Undefined variable: \"$light-gray\".\A         on line 9 of ./public/stylesheets/sass/gigs.scss\A \A 4: \A 5:   li {\A 6:     display: inline-block;\A 7:     margin: 0 0 18px 0;\A 8:     padding: 10px;\A 9:     border: 2px solid $light-gray;\A 10:     width: 90%;\A 11:     vertical-align: top;\A 12: \A 13:     img {\A 14:       width: 100%;"; }

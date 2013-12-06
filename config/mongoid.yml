@@ -1,7 +1,9 @@
 development:
   sessions:
     default:
-      uri: <%= ENV['MONGOHQ_URL'] %>
+      database: the405-events
+      hosts:
+        - localhost:27017
       options:
         skip_version_check: true
         safe: true

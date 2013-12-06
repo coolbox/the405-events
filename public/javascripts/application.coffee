@@ -1,9 +1,9 @@
 $ ->
-  window.giftlist = new GiftList
+  window.giglist = new GigList
 
-class window.GiftList
+class window.GigList
   constructor: ->
-    @gifts = new GLGift if @domContains '.gifts li'
+    @gigs = new GLGig if @domContains '.gigs li'
 
   domContains: (selectors...)->
     all_match = true
@@ -16,26 +16,3 @@ class window.GiftList
     $.each selectors, (index, item) ->
       none_found = false if $(item).length isnt 0
     none_found
-
-class window.GLGift
-  constructor:->
-    @giftLinks   = $('a', 'ul.gifts')
-    @bindVariables @giftLinks
-
-  bindVariables: ->
-    @giftLinks.on 'click', @actionClick
-
-  actionClick: (event) =>
-    event.preventDefault()
-    link = $(event.currentTarget)
-    url = link.attr('href')
-    product_id = link.parent('li').data('gift')
-    @incrementClicks product_id
-    window.open(url,'_blank');
-
-  incrementClicks: (product_id) ->
-    $.post '/gift/clicks/increment.json',
-      gift: 
-        id: product_id
-    .done (data) ->
-      console.log data

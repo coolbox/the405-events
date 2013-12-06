@@ -1,0 +1,17 @@
+%fieldset
+  %label{:for => "gig[title]"} Gig Title:
+  %input{:type => :text, :name => "gig[title]", :value => (@gig.title if @gig) }
+
+  %label{:for => "gig[date_time]"} Date & Time:
+  %input{:type => "datetime-local", :name => "gig[date_time]", :value => (@gig.date_time if @gig) }
+  
+  %label{:for => "gig[price]"} Price:
+  %input{:type => :text, :name => "gig[price]", :value => (@gig.price if @gig) }
+
+  %label{:for => "gig[venue]"} Venue:
+  %input{:type => :text, :name => "gig[venue]", :value => (@gig.venue if @gig) }
+
+  %label{:for => "gig[url]"} URL:
+  %input{:type => :url, :name => "gig[url]", :value => (@gig.url if @gig) }
+
+  %input{:type => :submit, :value => "Save", :class => "button"}

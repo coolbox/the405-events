@@ -13,4 +13,4 @@ use Sass::Plugin::Rack
 # use coffeescript for javascript
 use Rack::Coffee, root: 'public', urls: '/javascripts'
 
-run Giftlist::App
+run Giglist::App

@@ -8,28 +8,25 @@
     %link{rel: "stylesheet", href: "/stylesheets/gridforms.css", type: "text/css"}/
     /[if lt IE 9]
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    %title Pete's Gift List
-    %meta{content: "A small gift list application for sharing affiliate linked gifts with my friends and family.", name: "description"}/
+    %title The 405 Gig Listings
+    %meta{content: "The 405 Gig Listings"}/
 
   %body
     = haml :"shared/analytics"
     %header
       %nav
-        %a.home{href: "/"} Peter Roome
-        %a.twitter{href: "http://twitter.com/zoltarSpeaks", :target => :_blank} @zoltarSpeaks
+        %h1
+          %a.home{href: "/"} The 405 - Gig Listings
 
     %section.content
       = yield 
 
     %footer
-      %div
-        %p
-          %a{href: "http://peteroome.com"} Made by Pete
       .right
         %p.copyright
           &#169;
           = Time.now.year
-          Peter Roome
+          %a{href: "http://thefourohfive.com"} The 405
 
     %script{src: "/javascripts/jquery.js"}
     %script{src: "/javascripts/application.js"}

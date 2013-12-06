@@ -58,7 +58,7 @@ table {
 html,
 body {
   font-size: 1em;
-  font-family: 'Merriweather', 'Lato', 'Helvetica Neue', Helvetica, Arial, serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, serif;
   background: #fefefe;
   margin: 0;
   padding: 0;
@@ -83,14 +83,6 @@ h2 {
   font-weight: 900;
   margin: 40px 0 12px;
   text-transform: capitalize;
-}
-
-h4 {
-  font-family: 'Lato', sans-serif;
-  font-size: 1em;
-  color: $blue;
-  letter-spacing: 0.1em;
-  margin: 0 0 12px;
 }
 
 p {
@@ -149,5 +141,5 @@ pre {
 // Import css
 @import 'layout';
 @import 'forms';
-@import 'gifts';
+@import 'gigs';
 @import 'admin';
