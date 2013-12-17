@@ -8,10 +8,27 @@
   %label{:for => "gig[price]"} Price:
   %input{:type => :text, :name => "gig[price]", :value => (@gig.price if @gig) }
 
-  %label{:for => "gig[venue]"} Venue:
+  %legend Venue
+  %label{:for => "gig[venue]"} Venue Name:
   %input{:type => :text, :name => "gig[venue]", :value => (@gig.venue if @gig) }
 
-  %label{:for => "gig[url]"} URL:
+  %label{:for => "gig[venue_address_1]"} Address Line 1:
+  %input{:type => :text, :name => "gig[venue_address_1]", :value => (@gig.venue_address_1 if @gig) }
+
+  %label{:for => "gig[venue_address_2]"} Address Line 2:
+  %input{:type => :text, :name => "gig[venue_address_2]", :value => (@gig.venue_address_2 if @gig) }
+
+  %label{:for => "gig[venue_city]"} City:
+  %input{:type => :text, :name => "gig[venue_city]", :value => (@gig.venue_city if @gig) }
+
+  %label{:for => "gig[venue_county_state]"} County/State:
+  %input{:type => :text, :name => "gig[venue_county_state]", :value => (@gig.venue_county_state if @gig) }
+
+  %legend Links
+  %label{:for => "gig[url]"} More Info URL:
   %input{:type => :url, :name => "gig[url]", :value => (@gig.url if @gig) }
+
+  %label{:for => "gig[tickets_url]"} Tickets URL:
+  %input{:type => :url, :name => "gig[tickets_url]", :value => (@gig.tickets_url if @gig) }
 
   %input{:type => :submit, :value => "Save", :class => "button"}

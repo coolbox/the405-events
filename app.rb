@@ -5,16 +5,22 @@ require 'mongo'
 require 'uri'
 require 'mongoid'
 require 'json'
+require 'songkickr'
 
 module Giglist
   class Gig
     include Mongoid::Document
  
     field :title, type: String
-    field :date_time, type: Date
+    field :date_time, type: DateTime
     field :price, type: String
     field :venue, type: String
+    field :venue_address_1, type: String
+    field :venue_address_2, type: String
+    field :venue_city, type: String
+    field :venue_county_state, type: String
     field :url, type: String
+    field :tickets_url, type: String
 
     attr_accessible :title,
                     :date_time,
@@ -31,6 +37,8 @@ module Giglist
       # logger = Logger.new($stdout)
   
       Mongoid.load!("config/mongoid.yml")
+
+      @songkick = Songkickr::Remote.new(ENV["SONGKICK_API_KEY"])
     end
 
     helpers do
@@ -49,7 +57,7 @@ module Giglist
     end
 
     get '/' do
-      @gigs = Gig.order_by(:date_time.desc)
+      @gigs = Gig.order_by(:date_time.desc).group_by {|gig| gig.date_time.to_date}
       haml :index
     end
 

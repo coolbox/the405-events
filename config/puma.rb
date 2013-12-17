@@ -102,6 +102,7 @@
 #
 # The default is “0”.
 #
+# Only enable out of dev
 # workers 3
 
 # Code to run when a worker boots to setup the process before booting
@@ -128,10 +129,10 @@
 # activate_control_app 'unix:///var/run/pumactl.sock', { auth_token: '12345' }
 # activate_control_app 'unix:///var/run/pumactl.sock', { no_token: true }
 
-# preload_app!
+preload_app!
 
-# on_worker_boot do
-#   ActiveSupport.on_load(:active_record) do
-#     ActiveRecord::Base.establish_connection
-#   end
-# end
+on_worker_boot do
+  ActiveSupport.on_load(:active_record) do
+    ActiveRecord::Base.establish_connection
+  end
+end

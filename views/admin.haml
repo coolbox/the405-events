@@ -9,6 +9,8 @@
       %th Date & Time
       %th Price
       %th Venue
+      %th Venue Address
+      %th Links
       %th Actions
   %tbody
     - @gigs.each do |gig|
@@ -20,8 +22,15 @@
         %td= gig.price
         %td= gig.venue
         %td
-          %a{:href => "/edit/#{gig.id}"}
-            Edit
+          = gig.venue_address_1
+          = gig.venue_address_2
+          = gig.venue_city
+          = gig.venue_county_state
+        %td
+          %a{:target => :_blank, :href => gig.url}More Info
+          %a{:target => :_blank, :href => gig.tickets_url}Tickets
+        %td
+          %a{:href => "/edit/#{gig.id}"}Edit
 
           %form{ :action => "/gig/#{gig.id}", :method => :post }
             %input{:type => :hidden, :name => :_method, :value => :delete}

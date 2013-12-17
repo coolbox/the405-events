@@ -6,6 +6,7 @@ gem 'mongo'
 gem 'bson_ext'
 gem 'mongoid'
 gem 'json'
+gem 'songkickr'
 
 group :production do
   gem 'newrelic_rpm'

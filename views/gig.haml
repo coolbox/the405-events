@@ -1,0 +1,28 @@
+%li{class: 'gig', itemscope: "", itemtype: "http://data-vocabulary.org/Event"}
+  %a{href: gig.url, itemprop: "url", :target => :_blank}
+    %span{itemprop: "summary"}
+      = gig.title
+  
+  When:
+  %time{datetime: gig.date_time, itemprop: "startDate"}
+    = gig.date_time
+
+  Where:
+  %span{itemprop: "location", itemscope: "", itemtype: "http://data-vocabulary.org/​Organization"}
+    %span{itemprop: "name"}
+      = gig.venue
+    ​
+    %span{itemprop: "address", itemscope: "", itemtype: "http://data-vocabulary.org/Address"}
+      %span{itemprop: "street-address"}
+        = gig.venue_address_1
+        = gig.venue_address_2
+      %span{itemprop: "locality"}
+        = gig.venue_city
+      %span{itemprop: "region"}
+        = gig.venue_county_state
+  
+  %span{itemprop: "tickets", itemscope: "", itemtype: "http://data-vocabulary.org/Offer"}
+    %a{href: gig.url, itemprop: "offerurl", :target => :_blank}
+    %span{itemprop: "price"}
+      = gig.price
+    %span{content: "GBP", itemprop: "currency"}

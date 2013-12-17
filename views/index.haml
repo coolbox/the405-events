@@ -1,20 +1,8 @@
-%h2 
-  The best gigs, in one list, curated by those fine folk over at The 405.
+%h2 The best gigs, in one list, curated by those fine folk over at The 405.
 
-%table.gigs
-  - @gigs.each do |day, gig|
-    %thead
-      %tr
-        %th=day.inspect
-    %tbody
-      - @gigs.each do |gig|
-        %tr
-          %td
-            %h3
-              %a{:href => gig.url, :target => :_blank}
-                = gig.title
-          %td= gig.date_time
-          %td= gig.venue
-          %td= gig.price
-          %td
-            %a{:href => gig.url, :target => :_blank} More Info
+- @gigs.each do |day, gigs|
+  = day
+
+  %ul{class: 'gigs'}
+  - gigs.each do |gig|
+    = haml :gig, :locals => {:gig => gig}
