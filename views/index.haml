@@ -6,3 +6,5 @@
   %ul{class: 'gigs'}
   - gigs.each do |gig|
     = haml :gig, :locals => {:gig => gig}
+
+= @results.inspect

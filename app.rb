@@ -6,6 +6,10 @@ require 'uri'
 require 'mongoid'
 require 'json'
 require 'songkickr'
+require 'dotenv'
+
+# Load .env file
+Dotenv.load
 
 module Giglist
   class Gig
@@ -37,8 +41,6 @@ module Giglist
       # logger = Logger.new($stdout)
   
       Mongoid.load!("config/mongoid.yml")
-
-      @songkick = Songkickr::Remote.new(ENV["SONGKICK_API_KEY"])
     end
 
     helpers do
@@ -58,6 +60,8 @@ module Giglist
 
     get '/' do
       @gigs = Gig.order_by(:date_time.desc).group_by {|gig| gig.date_time.to_date}
+      @songkick = Songkickr::Remote.new(ENV["SONGKICK_API_KEY"])
+      @results = @songkick.events(artists: 'Iron Maiden, Radiohead, Lady Gaga, Jon Hopkins')
       haml :index
     end
 
